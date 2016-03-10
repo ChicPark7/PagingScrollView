@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JqI-c7-IiR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="soX-2M-6hs">
+            <objects>
+                <viewController id="JqI-c7-IiR" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GfX-OF-Jge"/>
+                        <viewControllerLayoutGuide type="bottom" id="VjD-JG-cwg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a3i-Y2-wgP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1AH-VT-B0d" customClass="PagingScrollView">
+                                <rect key="frame" x="0.0" y="50" width="600" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1AH-VT-B0d" secondAttribute="trailing" id="Di7-oz-0OP"/>
+                            <constraint firstItem="1AH-VT-B0d" firstAttribute="top" secondItem="a3i-Y2-wgP" secondAttribute="topMargin" constant="50" id="e7v-cb-Fk8"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1AH-VT-B0d" secondAttribute="bottom" constant="400" id="gHu-yb-7jc"/>
+                            <constraint firstItem="1AH-VT-B0d" firstAttribute="leading" secondItem="a3i-Y2-wgP" secondAttribute="leading" id="qu8-wR-TMM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pagingScrollView" destination="1AH-VT-B0d" id="gYS-Hp-3Ah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixt-dD-9ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="-728"/>
+        </scene>
+    </scenes>
+</document>
