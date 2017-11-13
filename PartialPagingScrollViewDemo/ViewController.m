@@ -46,9 +46,11 @@
 
 - (UIView*)viewInPagingScrollView:(PagingScrollView*)pagingScrollView atIndex:(NSInteger)index
 {
-    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    view.backgroundColor = [UIColor greenColor];
-    return view;
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    label.backgroundColor = [UIColor greenColor];
+    label.text = [NSString stringWithFormat:@"%ld", (long)index];
+    label.font = [UIFont boldSystemFontOfSize:30];
+    return label;
 }
 
 - (NSInteger)numberOfItemInPagingScrollView:(PagingScrollView*)pagingScrollView
